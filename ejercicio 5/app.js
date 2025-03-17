@@ -1,7 +1,6 @@
-// se importan las funciones donde se realizan las solicitudes de usuarios, post,comentarios,albumes y fotos desde el index.js
-import { getUsuarios, getPost, getCommets,getAlbumes,getFotos } from "./modulos/index.js";
-// se declara una variable de tipo const se asigna la url de la api
-export const URL = "https://jsonplaceholder.typicode.com";
+// se importan las funciones donde se realizan las solicitudes de usuarios, post,comentarios,albumes,fotos y la url desde el index.js
+import { getUsuarios, getPost, getCommets,getAlbumes,getFotos,URL } from "./modulos/index.js";
+
 const manejardatos = async () => {
   // se manejan los errores con el try catch en caso de haber algun error en las peticiones
   try {
