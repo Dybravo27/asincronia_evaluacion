@@ -1,10 +1,8 @@
-// se importa la funcion "getUsuarios" que se encargara
-// de hacer una solicitud para traer los usuarios
+// se importa la funcion "getUsuarios", se encarga de hacer la solicitud a la API para obtener los usuarios
+// se importa la funcion "getTareas", se encarga de hacer la solicitud para obtener las tareas de cada usuario
+// se importa la constante "URL", que contiene la URL de la API para realizar las solicitudes
 import { getUsuarios ,getTareas, URL } from "../ejercicio 5/modulos/index.js";
-// se importa la funcion "getTareas" que se encargara de hacer una 
-// solicitud para traer las tareas asociadas a un usuario
-
-/// se declara una función asincrona que va a devolver los datos de usuarios y tareas
+// se declara una función asincrona que va a devolver los datos de usuarios y tareas
 const manejardatos = async () => {
   // se utiliza un bloque try-catch para manejar posibles errores que puedan surgir durante la ejecucion de la funcion
   // evitando que se interrumpa la ejecucion del programa
@@ -42,7 +40,7 @@ const manejardatos = async () => {
 // se invoca la funcion "manejardatos" y se maneja el resultado con ".then" 
 // el resultado es un arreglo de usuarios cada uno con su lista de tareas que se imprime en la consola
 manejardatos().then((data) => {
-  // Una vez que se resuelven todas las promesas, se imprime el arreglo `data` en la consola
+  // Una vez que se resuelven todas las promesas, se imprime el arreglo "data" en la consola
   // este arreglo contiene todos los usuarios con sus respectivas tareas
   console.log(data);
 });
