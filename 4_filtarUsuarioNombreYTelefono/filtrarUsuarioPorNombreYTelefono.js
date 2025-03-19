@@ -2,9 +2,9 @@
 // para traer los usuarios desde la API y "URL" es la constante que contiene la URL base de la API 
 // a la cual se realizarán las solicitudes, se importan desde el archivo "index.js"
 import { getUsuarios,URL } from "../ejercicio 5/modulos/index.js";
-// se declara la funcion asincrona "manejardatos" se encargara de obtener los usuarios y sus datos
+// se declara la funcion asincrona "filtrarUsuarioPorNombreYTelefono" se encargara de obtener los usuarios y sus datos
 // para extraer solo el nombre y el telefono de cada usuario
-const manejardatos = async () => {
+export const filtrarUsuarioPorNombreYTelefono = async () => {
   // se utiliza un bloque "try-catch" para manejar errores de forma adecuada
   // si algo sale mal en la solicitud HTTP el error será capturado en el bloque "catch"
   try {
@@ -28,9 +28,9 @@ const manejardatos = async () => {
     throw new Error("Ocurrio una falla : " + error);
   }
 };
-// se invoca la funcion "manejardatos" que devuelve una promesa con los datos de los usuarios y con
+// se invoca la funcion "filtrarUsuarioPorNombreYTelefono" que devuelve una promesa con los datos de los usuarios y con
 // ".then" se maneja el resultado de esa promesa
-manejardatos().then((data) => {
+filtrarUsuarioPorNombreYTelefono().then((data) => {
   // cuando las promesas esten resueltas, se muestra un arreglo de objetos que tiene
   // el nombre y telefono de cada usuario
   console.log(data); // imprime el arreglo con los nombres y telefonos de los usuarios

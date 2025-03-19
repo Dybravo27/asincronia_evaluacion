@@ -22,51 +22,6 @@
 body{
     background: linear-gradient(90deg, var(--negro) 30%, var(--gris_oscuro) 63%, var(--gris_claro) 100%);
 }
-/* ESTILOS DEL LISTADO DE EJERCICIOS */
-.content_lista{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-.lista{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    padding: 2vw;
-    padding-top: 4vw;
-    gap: 20px;
-}
-.lista__item{
-    list-style: none;
-    background-color: var(--blanco);
-    position: relative;
-    border-radius: 12px;
-    padding: 10px;
-    z-index: 2;
-}
-.lista__item:hover{
-  transform: scale(1.1);
-  transition: transform 0.5s;
-  box-shadow:0 2px 2px var(--gris_oscuro),
-    0 5px 8px var(--blanco),
-    0 6px 9px var(--blanco);
-}
-.lista__enlace{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    width: 120px;
-    height: 50px;
-    text-decoration: none;
-    color: var(--gris_oscuro);
-    border-radius: 5px;
-}
-
-
 /* ESTILOS DE LOS ENUNCIADOS DE CADA EJERCICIO */
 .seccion{
     display: flex;
@@ -86,9 +41,9 @@ body{
     height: 70%;
 }
 .contenido--sombra_fondo_blanco{
-    height: 80%;
+    height: 90%;
     background-color: var(--blanco);
-    padding: 40px;
+    padding: 20px 40px 40px 40px;
     border-radius: 20px;
     box-shadow:  30px 30px 32px var(--gris_oscuro),
              -30px -30px 32px var(--gris_claro);
@@ -96,7 +51,7 @@ body{
 .contenido__titulo{
     color: var(--blanco);
     font-weight: 700;
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-shadow: 0 3px 3px var(--gris_oscuro),
     0 4px 4px var(--gris_oscuro),
     0 5px 8px var(--blanco),
@@ -107,8 +62,8 @@ body{
     color: var(--gris_oscuro);
     padding-top: 2vh;
     font-weight: 400;
-    line-height: 35px;
-    font-size: 2rem;
+    line-height: 32px;
+    font-size: 1.5rem;
     text-align: justify;
 }
 .contenido__texto--tamano_letra{

@@ -6,8 +6,8 @@ import { getUsuarios, getPost, getCommets, URL } from "../ejercicio 5/modulos/in
 // se solicita al usuario que ingrese texto para buscar dentro de los titulos de los posts
 // mediante un cuadro de entrada (prompt)
 const tituloBuscado = prompt("Ingrese titulo del post:");
-// se declara funcion asincrona "manejardatos"
-const manejardatos = async () => {
+// se declara funcion asincrona "buscarPostsComentarios"
+export const buscarPostsComentarios = async () => {
     try {
         // se obtiene la lista de usuarios mediante una llamada a la API usando la funcion "getUsuarios"
         const usuarios = await getUsuarios(URL);
@@ -49,5 +49,6 @@ const manejardatos = async () => {
     }
 };
 
-// se ejecuta la funcion "manejardatos", lo que inicia todo el proceso de obtención de datos y filtrado
-manejardatos();
+// se ejecuta la funcion "buscarPostsComentarios", lo que inicia todo el proceso de obtención de datos y filtrado
+buscarPostsComentarios();
+export default buscarPostsComentarios;

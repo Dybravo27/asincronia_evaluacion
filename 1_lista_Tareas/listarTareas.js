@@ -3,7 +3,7 @@
 // se importa la constante "URL", que contiene la URL de la API para realizar las solicitudes
 import { getUsuarios ,getTareas, URL } from "../ejercicio 5/modulos/index.js";
 // se declara una función asincrona que va a devolver los datos de usuarios y tareas
-const manejardatos = async () => {
+export const listarTareasPendientes = async () => {
   // se utiliza un bloque try-catch para manejar posibles errores que puedan surgir durante la ejecucion de la funcion
   // evitando que se interrumpa la ejecucion del programa
   try {
@@ -37,9 +37,9 @@ const manejardatos = async () => {
     throw new Error("Ocurrio una falla : " + error);
   }
 };
-// se invoca la funcion "manejardatos" y se maneja el resultado con ".then" 
+// se invoca la funcion "listarTareasPendientes" y se maneja el resultado con ".then" 
 // el resultado es un arreglo de usuarios cada uno con su lista de tareas que se imprime en la consola
-manejardatos().then((data) => {
+listarTareasPendientes().then((data) => {
   // Una vez que se resuelven todas las promesas, se imprime el arreglo "data" en la consola
   // este arreglo contiene todos los usuarios con sus respectivas tareas
   console.log(data);

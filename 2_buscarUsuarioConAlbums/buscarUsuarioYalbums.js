@@ -4,7 +4,7 @@
 // se importa la constante "URL", que contiene la URL de la API para realizar las solicitudes
 import { getUsuarios ,getAlbumes, getFotos, URL } from "../ejercicio 5/modulos/index.js";
 // se declara una funcion asincrona que va a devolver los datos de usuarios, sus albumes y las fotos de los albumes
-const manejardatos = async () => {
+ export const buscarUsuarioMostrarAlbums = async () => {
   // se utiliza un bloque try-catch para manejar posibles errores que puedan surgir durante la ejecucion de la funcion
   // evitando que se interrumpa la ejecucion del programa
   try {
@@ -53,8 +53,8 @@ const buscarUserName = (usuarios, UserName) => {
     return null;
 };
 
-// se llama a la función manejardatos() para obtener los datos de los usuarios y sus albumes
-manejardatos().then((usuarios) => {
+// se llama a la función buscarUsuarioMostrarAlbums() para obtener los datos de los usuarios y sus albumes
+buscarUsuarioMostrarAlbums().then((usuarios) => {
     // se solicita al usuario que ingrese el nombre de usuario a buscar
     let UserName = prompt("Ingrese el nombre de usuario:");
 
@@ -63,7 +63,7 @@ manejardatos().then((usuarios) => {
 
     // si el usuario se encuentra, se imprime su información en la consola
     if (usuario) {
-        console.log("Datos del usuario:", usuario);
+        console.log(usuario);
     } else {
         // si el usuario no se encuentra, se muestra un mensaje indicando que no se encontro
         console.log("Usuario no encontrado.");

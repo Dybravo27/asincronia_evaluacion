@@ -3,8 +3,8 @@
 // los albumes de los usuarios "getAlbumes", las fotos dentro de los albumes "getFotos" y la
 // URL de la API desde el archivo "index.js"
 import { getUsuarios, getPost, getCommets, getAlbumes, getFotos, URL } from "./modulos/index.js";
-// se declara una funcion asincrona "manejardatos"
-const manejardatos = async () => {
+// se declara una funcion asincrona "obtenerUsuariosConTodo"
+export const obtenerUsuariosConTodo = async () => {
   // se maneja el flujo de errores con try-catch si alguna de las solicitudes falla, 
   // el error se captura y se maneja
   try {
@@ -49,11 +49,11 @@ const manejardatos = async () => {
     throw new Error("Ups ocurrio una falla : " + error);
   }
 };
-// se llama a la funcion "manejardatos" y se maneja el resultado con ".then"
+// se llama a la funcion "obtenerUsuariosConTodo" y se maneja el resultado con ".then"
 // la funcion devuelve un arreglo de usuarios donde cada usuario tiene :
 // sus posts con los comentarios correspondientes y
 // sus albumes con las fotos de cada album
-manejardatos().then((data) => {
+obtenerUsuariosConTodo().then((data) => {
   // una vez que se resuelven todas las promesas, se imprime en la consola el arreglo "data"
   console.log(data); // imprime el resultado de los usuarios con la informacion 
   // completa de los usuarios, posts, comentarios, albumes y fotos
